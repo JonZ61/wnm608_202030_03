@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>home page</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/style_guide.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<header class="navbar">
+		<div class="container medium display-flex">
+			<h1 class="flex-stretch">LOGO</h1>
+
+			<nav class="nav flex-none">
+				<ul class="display-flex">
+					<li><a href="#">Link 1</a></li>
+					<li><a href="#">Link 2</a></li>
+					<li><a href="#">Link 3</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div class="view-window" style="background-image:url('img/shoes_stock.jpg');">
+		<div class="card view-content" style="max-width: 700px ">
+			<h2>Storage</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam perspiciatis, ipsa! Dicta dolor blanditiis, velit iure, distinctio perferendis nisi impedit.</p>
+			
+		</div>
+	</div>
+	
+	<div class="container">
+		<h2>Best Sell</h2>
+
+		<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="img/jodan1_ad.jpg" style="width:100%" alt="">
+  <div class="text">Jodan 1</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="img/yeezy350_ad.jpg" style="width:100%" alt="">
+  <div class="text">Yeezy350</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="img/yeezy750_ad.jpg" style="width:100%" alt="">
+  <div class="text">Yeezy750</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+		
+	</div>
+	<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+
+</html>
